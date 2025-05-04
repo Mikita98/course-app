@@ -14,7 +14,6 @@ const CourseDetails: FC<{ sessions: CourseSessionInfo[], isSaved: boolean, onSav
       <h4 className="text-title-large">Course Dates</h4>
       {sessions.map((session) => (
         <CourseSession
-          className="mt-6"
           id={session.id}
           key={session.id}
           dates={session.dates}
