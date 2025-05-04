@@ -2,6 +2,7 @@ import RadioButton from "@/components/RadioButton.tsx";
 import {FC} from "react";
 import {CourseSessionInfo, Instructor, Location, Pricing} from "@/types";
 import {DateTime} from "luxon";
+import ImageLoader from "@/components/ImageLoader.tsx";
 
 const formatDatesWithLuxon = (dates: [number, number][], timezone: string): string => {
   const formattedDates = dates.map(([startTimestamp]) => {
@@ -116,7 +117,7 @@ export const CourseSession: FC<CourseSessionProps> = ({
         </div>
 
         <div className="shrink-0">
-          <img
+          <ImageLoader
             src={instructor.portrait_image}
             alt={`${instructor.first_name} ${instructor.last_name}`}
             className="w-20 h-20 rounded-full object-cover"
