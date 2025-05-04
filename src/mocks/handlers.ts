@@ -100,15 +100,10 @@ export const handlers = [
     );
   }),
 
-  http.get('/api/profile/saved/courses/:courseId/status', ({ params }) => {
-    const { courseId } = params;
-
-    return new HttpResponse(
-      JSON.stringify({
-        isSaved: savedCourses.has(courseId?.toString() as string)
-      }),
-      { status: 200 }
+  http.get('/api/profile/saved/courses', () => {
+    return HttpResponse.json(
+      Array.from(savedCourses)
     );
-  }),
+  })
 
 ]

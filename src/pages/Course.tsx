@@ -21,24 +21,25 @@ const Course: FC = () => {
       }
 
       try {
-        const [courseResponse, savedStatusResponse] = await Promise.all([
+        const [courseResponse, savedCoursesResponse
+        ] = await Promise.all([
           fetch(`/api/courses/${courseId}/schedule`),
-          fetch(`/api/profile/saved/courses/${courseId}/status`)
+          fetch(`/api/profile/saved/courses/`)
         ]);
 
         if (!courseResponse.ok) {
           throw new Error('Failed to fetch course details');
         }
 
-        if (!savedStatusResponse.ok) {
+        if (!savedCoursesResponse.ok) {
           throw new Error('Failed to fetch saved status');
         }
 
         const courseData = await courseResponse.json();
-        const { isSaved: savedStatus } = await savedStatusResponse.json();
+        const savedCourses: string[] = await savedCoursesResponse.json();
 
         setSessions(courseData);
-        setIsSaved(savedStatus);
+        setIsSaved(savedCourses.includes(courseId));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
       } finally {
