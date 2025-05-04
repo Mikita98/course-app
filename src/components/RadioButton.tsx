@@ -23,7 +23,11 @@ const RadioButton: FC<RadioButtonProps> = ({ modelValue, value, onChange }) => {
         cursor-pointer
         focus-visible:outline-none"
         checked={modelValue === value}
-        onClick={() => onChange(value)}
+        onChange={(e) => {
+          if (e.target.checked) {
+            onChange(value);
+          }
+        }}
         value={value}
       />
     </div>
