@@ -7,7 +7,7 @@ const CourseEnroll: FC = () => {
   return(
     <div className="flex justify-center">
       <p className="text-neutral-100">
-        Course {courseId} enrolling under construction!
+        Course {courseId} - Enrollment coming soon!
       </p>
     </div>
   )
