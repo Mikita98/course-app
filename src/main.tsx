@@ -10,7 +10,7 @@ async function initialize() {
 
   await worker.start({
     onUnhandledRequest: 'bypass',
-    serviceWorker: {url: '/mockServiceWorker.js'}
+    serviceWorker: {url: '/course-app/mockServiceWorker.js'}
   })
 
   createRoot(document.getElementById('root')!).render(
