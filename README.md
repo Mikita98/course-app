@@ -17,3 +17,8 @@
 - UnoCSS for styling
 - React Router DOM 7.5.3 for routing
 - MSW 2.7.5 for API mocking
+
+
+
+https://github.com/user-attachments/assets/3446cd00-bbeb-4420-b61a-cb103192670e
+
