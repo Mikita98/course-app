@@ -108,22 +108,22 @@ export const CourseSession: FC<CourseSessionProps> = ({
         <p className="text-primary-30 text-heading-small">Virtual Course</p>
       </div>
 
-      <div className="mt-2 flex pl-8 gap-4 justify-between">
+      <div className="mt-1 flex pl-8 gap-4 justify-between">
         <div>
           <p className="text-title-small-bold break-words">{formattedDates}</p>
-          <p className="text-title-small-regular mt-2">{formattedTimeRange}</p>
-          <p className="text-body-medium-regular mt-2">{formattedTimeZone} Time</p>
+          <p className="text-title-small-regular mt-1">{formattedTimeRange}</p>
+          <p className="text-body-medium-regular mt-1">{formattedTimeZone} Time</p>
           <p className="text-body-medium-regular mt-4">{formattedPrice} Until {formattedValidUntil}</p>
         </div>
 
-        <div className="shrink-0">
+        <div className="shrink-0 text-center">
           <ImageLoader
             src={instructor.portrait_image}
             alt={`${instructor.first_name} ${instructor.last_name}`}
             className="w-20 h-20 rounded-full object-cover"
           />
-          <p className="text-body-medium-regular">Instructor:</p>
-          <p className="text-body-medium-regular">{instructor.first_name} {instructor.last_name}</p>
+            <p className="text-body-medium-regular">Instructor:</p>
+            <p className="text-body-medium-regular">{instructor.first_name} {instructor.last_name}</p>
         </div>
       </div>
     </div>
