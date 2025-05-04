@@ -15,6 +15,7 @@ const RadioButton: FC<RadioButtonProps> = ({ modelValue, value, onChange }) => {
       <input
         type="radio"
         className="
+        radio
         m-0 appearance-none w-22px h-22px rounded-full border-1 border-secondary-50 border-solid
         checked:bg-secondary-50
         checked:p-[5px]
