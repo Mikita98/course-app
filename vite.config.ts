@@ -6,6 +6,7 @@ import * as path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [UnoCSS(), react()],
+  base: 'https://mikita98.github.io/course-app',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
