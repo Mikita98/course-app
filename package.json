@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "private": true,
+  "name": "course-app",
+  "homepage": "https://mikita98.github.io/course-app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
