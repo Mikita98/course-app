@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+html, body, #root, p, h4, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--default-text-color);
+  background: #292929;
+}
+
+
+html, body, button, input, textarea, select {
+  font-family: var(--default-font);
+}
