@@ -1,5 +1,6 @@
 // RadioButton.tsx
 import { FC } from "react";
+import './RadioButton.css';
 
 interface RadioButtonProps {
   modelValue: number;
@@ -10,6 +11,7 @@ interface RadioButtonProps {
 
 const RadioButton: FC<RadioButtonProps> = ({ modelValue, value, onChange }) => {
   return (
+    <div className="radio-wrapper inline-flex">
       <input
         type="radio"
         className="
@@ -18,12 +20,12 @@ const RadioButton: FC<RadioButtonProps> = ({ modelValue, value, onChange }) => {
         checked:p-[5px]
         checked:bg-clip-content
         cursor-pointer
-        focus-visible:outline-offset-[6px]
-        focus-visible:outline-secondary-50"
+        focus-visible:outline-none"
         checked={modelValue === value}
         onClick={() => onChange(value)}
         value={value}
       />
+    </div>
   )
 }
 
